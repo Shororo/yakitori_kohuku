@@ -20,7 +20,7 @@ $(window).resize(function() {
 	//現在の画面サイズ
   var winW = $(window).width();
   //判定基準にしたい画面サイズ
-  var devW = 680;
+  var devW = 1023;
   
   if (winW <= devW) {
     //720px以下の時の処理  
@@ -38,7 +38,7 @@ $(window).resize(function() {
 	//スマホ用navここまで
 	
 } else {
-  //680pxより大きい時の処理
+  //720pxより大きい時の処理
   
   	//navをheaderの中に入れる
   	$("nav").insertAfter(".navigation");

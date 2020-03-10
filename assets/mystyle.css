@@ -284,14 +284,15 @@ header{
 }
 .header-contents{
   width: 95%;
-  height: 7rem;
+  height: 8rem;
   margin-left: auto;
   margin-right: auto;
 }
 .header-logo{
   float: left;
   /* 以下、画像を小さくしてヘッダーの上下真ん中に配置(消しても良い) */
-  width: 40%;
+  height: 45%;
+  width: auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -310,7 +311,7 @@ nav{
   display: none;
   width: 100%;
   position: fixed;
-  top: 8.5vh;
+  top: 8rem;
   z-index:998;
   /* 任意のナビゲーションカラー */
   background-color: #222831;
@@ -340,7 +341,7 @@ nav a:hover{
 /* モバイル用ここまで */
 
 /* PC用 */
-@media (min-width: 680px){
+@media (min-width: 1023px){
   .navigation{
     display: none;
   }
@@ -388,6 +389,20 @@ nav a:hover{
     font-size: 2rem;
     padding-left: 0;
   }
+
+  #menu{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+#kodawari{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+#info{
+  margin-top: -0rem;
+  padding-top: 0rem;
+}
+
 }
 /* PC用ここまで */
 /* headerここまで */
@@ -517,3 +532,98 @@ hr{
   border-top: 1px white solid;
 }
 /*フッターここまで*/
+
+/*レスポンシブ*/
+@media (min-width: 720px){
+  #title img{
+  position: absolute;
+  height: 50%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+}
+
+@media (min-width: 767px){
+  /*パディングとマージン*/
+.dmt-6{
+  margin-top: 6rem;
+}
+.dmt-10{
+  margin-top: 10rem;
+}
+.dmtb-8{
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.dmtb-10{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.dmtb-15{
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+.dpt-6{
+  padding-top: 6rem;
+}
+.dpt-7{
+  padding-top: 7rem;
+}
+.dpt-10{
+  padding-top: 10rem;
+}
+.dptb-7{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.dptb-10{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.dptb-12{
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+.dmtb-15{
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+/*パディングとマージンここまで*/
+
+#prologue .pt-5{
+  padding-top: 0 !important;
+}
+.prologue-desk{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.prologue-desk img{
+  height: 10rem !important;
+}
+.picture{
+  height: 35rem;
+}
+.kodawari-text{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer img{
+  height: 20rem;
+}
+}
+
+@media (min-width: 900px){
+  .width-90{
+    width: 900px;
+  }
+  footer ul li{
+    display: inline;
+    margin-left: 2rem;
+    margin-right: 2rem; 
+  }
+}
+/*レスポンシブここまで*/
