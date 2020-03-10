@@ -67,9 +67,4 @@ $(window).resize(function() {
 
   }
 
-  //ローディングが終わってからサイトを表示
-  Pace.on('done', function(){
-    $("#loading-window").fadeOut();
-  });
-
   });
