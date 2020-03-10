@@ -221,16 +221,16 @@ p{
 }
 
 #menu{
-  margin-top: -7rem;
-  padding-top: 7rem;
+  margin-top: -6rem;
+  padding-top: 6rem;
 }
 #kodawari{
-  margin-top: -7rem;
-  padding-top: 7rem;
+  margin-top: -6rem;
+  padding-top: 6rem;
 }
 #info{
-  margin-top: -7rem;
-  padding-top: 7rem;
+  margin-top: -6rem;
+  padding-top: 6rem;
 }
 /*widthとheightここまで*/
 
@@ -533,6 +533,20 @@ hr{
   border-top: 1px white solid;
 }
 /*フッターここまで*/
+
+
+/*ローディング画面ここから*/
+#loading-window{
+  background-image: url(../material/yakitori_kabegami.png);
+  background-repeat: repeat;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+}
+/*ローディング画面ここまで*/
+
 
 /*レスポンシブ*/
 @media (min-width: 639px){

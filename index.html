@@ -9,11 +9,13 @@
   <script src="https://kit.fontawesome.com/7c414374ac.js" crossorigin="anonymous"></script>
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+  <!-- ローディングメーターの生成 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-center-circle.min.css" />
   
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Smooth_Slider CSS -->
@@ -25,6 +27,8 @@
 </head>
 <body>
 
+  <!-- ローディング画面の生成 -->
+<div id="loading-window"></div>
 
   <!-- ヘッダー -->
   <header>
@@ -50,7 +54,7 @@
   <!-- Smooth_Slider 動作部分 -->
   <div id="smooth_slider" class="is-preload"></div>
   <div id="title">
-    <img class="d-shadow" src="material/title_logo.png" alt="焼き鳥口福 光の森店 タイトルテキスト">
+    <img class="d-shadow" data-aos="fade-up" data-aos-duration="1500" src="material/title_logo.png" alt="焼き鳥口福 光の森店 タイトルテキスト">
   </div>
   <!-- タイトル画面ここまで -->
 
@@ -59,9 +63,8 @@
   <div id="prologue">
     <div class="text-white text-center bg-orange ptb-12">
       <div class="width-90">
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="750">
           <h1><i class="fas fa-home"></i>　焼き鳥をお家で！</h1>
-           </div>
 
           <div class="row">
             <div class="col-md-6">
@@ -78,6 +81,7 @@
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -87,194 +91,200 @@
   <div id="menu">
     <div class="bg-white text-center ptb-12 text-gray">
       <div class="width-90">
-        <h1><i class="fab fa-elementor"></i>　メニュー</h1>
+        <div data-aos="fade-up" data-aos-duration="750">
+          <h1><i class="fab fa-elementor"></i>　メニュー</h1>
 
-        <div class="text-left pt-10 mainasu">
-          <h2>単品</h2>
-          <img class="midasi2_design" src="material/tanpin.svg" alt="単品マーク">
+          <div class="text-left pt-10 mainasu">
+            <h2>単品</h2>
+            <img class="midasi2_design" src="material/tanpin.svg" alt="単品マーク">
+          </div>
+
+          <p>豊富な品揃え、より取り見取り！</p>
+          <p>20種類以上の焼き鳥♪</p>
         </div>
-
-        <p>豊富な品揃え、より取り見取り！</p>
-        <p>20種類以上の焼き鳥♪</p>
         <div class="row pt-5">
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000" data-aos-once="ture">
               <img src="images/torikawa.jpg" alt="口福単品メニュー">
               <p>鳥皮</p>
               <p class="nedan">123円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/torimi.jpg" alt="口福単品メニュー">
               <p>鳥身</p>
               <p class="nedan">123円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/negima.jpg" alt="口福単品メニュー">
               <p>ねぎま</p>
               <p class="nedan">133円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/seseri.jpg" alt="口福単品メニュー">
               <p>せせり</p>
               <p class="nedan">133円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/sunazuri.jpg" alt="口福単品メニュー">
               <p>砂ずり</p>
               <p class="nedan">123円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/tukune.jpg" alt="口福単品メニュー">
               <p>つくね</p>
               <p class="nedan">113円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/tebasaki.jpg" alt="口福単品メニュー">
               <p>手羽先</p>
               <p class="nedan">133円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/bonziri.jpg" alt="口福単品メニュー">
               <p>ぼんじり</p>
               <p class="nedan">123円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/torininniku.jpg" alt="口福単品メニュー">
               <p>鳥にんにく</p>
               <p class="nedan">133円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/torireba.jpg" alt="口福単品メニュー">
               <p>鳥レバー</p>
               <p class="nedan">123円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/hatu.jpg" alt="口福単品メニュー">
               <p>ハツ</p>
               <p class="nedan">123円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/nankotu.jpg" alt="口福単品メニュー">
               <p>鳥軟骨</p>
               <p class="nedan">144円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/harami.jpg" alt="口福単品メニュー">
               <p>豚ハラミ</p>
               <p class="nedan">144円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/butabara.jpg" alt="口福単品メニュー">
               <p>豚バラ</p>
               <p class="nedan">144円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/tontan.jpg" alt="口福単品メニュー">
               <p>豚タン</p>
               <p class="nedan">144円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/hatune.jpg" alt="口福単品メニュー">
               <p>ハツネ</p>
               <p class="nedan">133円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/garikku.jpg" alt="口福単品メニュー">
               <p class="letter1">ガーリックホルモン</p>
               <p class="nedan">164円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/butanira.jpg" alt="口福単品メニュー">
               <p>豚バラにら巻</p>
               <p class="nedan">164円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/butati.jpg" alt="口福単品メニュー">
               <p class="letter1">豚バラチーズえのき</p>
               <p class="nedan">164円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/po-hura.jpg" alt="口福単品メニュー">
               <p>ポークフランク</p>
               <p class="nedan">123円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/tihura.jpg" alt="口福単品メニュー">
               <p>チーズフランク</p>
               <p class="nedan">175円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/tonsoku.jpg" alt="口福単品メニュー">
               <p>豚足</p>
               <p class="nedan">300円（税込）</p>
             </div>
           </div>
           <div class="col-6 col-sm-4 col-lg-3 pb-5">
-            <div class="tanpin d-shadow">
+            <div class="tanpin d-shadow" data-aos="flip-left" data-aos-duration="1000">
               <img src="images/sagari.jpg" alt="口福単品メニュー">
               <p>牛さがり</p>
               <p class="nedan">216円（税込）</p>
             </div>
           </div>
         </div>
-        <div class="text-left">
-          <p>※価格は1本あたりの税込価格です。</p>
-          <p>※味付けは、[しお、たれ、おまかせ]からお選びいただけます。</p>
+        <div data-aos="fade-up" data-aos-duration="750">
+          <div class="text-left">
+            <p>※価格は1本あたりの税込価格です。</p>
+            <p>※味付けは、[しお、たれ、おまかせ]からお選びいただけます。</p>
+          </div>
         </div>
 
-        <div class="text-left pt-10 mainasu">
-          <h2>セット</h2>
-          <img class="midasi2_design" src="material/set.svg" alt="セットマーク">
-        </div>
+        <div data-aos="fade-up" data-aos-duration="750">
+          <div class="text-left pt-10 mainasu">
+            <h2>セット</h2>
+            <img class="midasi2_design" src="material/set.svg" alt="セットマーク">
+          </div>
 
-        <p>迷ったらセットで決まり！</p>
-        <p>注文簡単、お値段お得♪</p>
+          <p>迷ったらセットで決まり！</p>
+          <p>注文簡単、お値段お得♪</p>
+        </div>
         <div class="py-5 px-3">
           <div class="row">
             <div class="col-md-6">
-              <div class="set">
+              <div class="set" data-aos="flip-left" data-aos-duration="750">
                 <img class="picture" src="images/yakitori01.jpg" alt="Aセット">
                 <div class="p-4">
                   <p>定番やきとり！Aセット</p>
@@ -289,7 +299,7 @@
             </div>
 
             <div class="col-md-6">
-              <div class="set mt-5 mt-md-0">
+              <div class="set mt-5 mt-md-0" data-aos="flip-left" data-aos-duration="750">
                 <img class="picture" src="images/yakitori01.jpg" alt="Bセット">
                 <div class="p-4">
                   <p>酒のおつまみ！Bセット</p>
@@ -304,7 +314,7 @@
             </div>
           </div>      
         </div>
-        <p class="text-left">※味付けは、[しお、たれ、おまかせ]からお選びいただけます。</p>
+        <p class="text-left" data-aos="fade-up" data-aos-duration="750">※味付けは、[しお、たれ、おまかせ]からお選びいただけます。</p>
       </div>
     </div>
   </div>
@@ -315,48 +325,54 @@
   <div id="kodawari">
     <div class="bg-orange text-center text-white ptb-12">
       <div class="width-90">
-        <h1><i class="fas fa-hand-holding-heart"></i>　新鮮・美味しさ</h1>
+        <div data-aos="fade-up" data-aos-duration="750">
+          <h1><i class="fas fa-hand-holding-heart"></i>　新鮮・美味しさ</h1>
+        </div>
 
         <div class="pt-10">
-          <div class="kodawari">
-            <img class="midasi3_design" src="material/niwatori.svg" alt="セットマーク">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="text-left kodawari-text">
-                  <h2 class="pb-4 midasi3">新鮮な九州産若鶏を使用</h2>
-                  <div class="z-1">
-                    <p>口福の焼き鳥は九州産の若鳥を使用。</p>
-                    <p>加工は衛生管理が徹底された、</p>
-                    <p>熊本の串刺し専門工場で行っています。</p>
-                    <p>処理、串刺し調理までをスムーズに行う</p>
-                    <p>ため、新鮮で美味しく、安全です。</p>
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <div class="kodawari">
+              <img class="midasi3_design" src="material/niwatori.svg" alt="セットマーク">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-left kodawari-text">
+                    <h2 class="pb-4 midasi3">新鮮な九州産若鶏を使用</h2>
+                    <div class="z-1">
+                      <p>口福の焼き鳥は九州産の若鳥を使用。</p>
+                      <p>加工は衛生管理が徹底された、</p>
+                      <p>熊本の串刺し専門工場で行っています。</p>
+                      <p>処理、串刺し調理までをスムーズに行う</p>
+                      <p>ため、新鮮で美味しく、安全です。</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <img class="picture pt-3 pt-md-0" src="images/yakitori01.jpg" alt="焼いている所">
+                <div class="col-md-6">
+                  <img class="picture pt-3 pt-md-0" src="images/yakitori01.jpg" alt="焼いている所">
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="kodawari mt-10">
-            <img class="midasi3_design" src="material/tare.svg" alt="セットマーク">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="text-left kodawari-text">
-                  <h2 class="pb-4 midasi3">タレは自家製</h2>
-                  <div class="z-1">
-                    <p>辛すぎず、サッパリとした甘み。 </p>
-                    <p>味わい深いコクと風味でご好評</p>
-                    <p>いただいております。</p>
-                    <p>小さなお子様からおじいちゃん、</p>
-                    <p>おばあちゃんまで、安心してお召し</p>
-                    <p>上がりいただけます。</p>
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <div class="kodawari mt-10">
+              <img class="midasi3_design" src="material/tare.svg" alt="セットマーク">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-left kodawari-text">
+                    <h2 class="pb-4 midasi3">タレは自家製</h2>
+                    <div class="z-1">
+                      <p>辛すぎず、サッパリとした甘み。 </p>
+                      <p>味わい深いコクと風味でご好評</p>
+                      <p>いただいております。</p>
+                      <p>小さなお子様からおじいちゃん、</p>
+                      <p>おばあちゃんまで、安心してお召し</p>
+                      <p>上がりいただけます。</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <img class="picture pt-3 pt-md-0" src="images/yakitori01.jpg" alt="タレの写真">
+                <div class="col-md-6">
+                  <img class="picture pt-3 pt-md-0" src="images/yakitori01.jpg" alt="タレの写真">
+                </div>
               </div>
             </div>
           </div>
@@ -371,23 +387,25 @@
   <div id="info">
     <div class="bg-white ptb-12 text-center text-gray">
       <div class="width-90">
-        <h1><i class="fas fa-utensils"></i>　店舗情報</h1>
+        <div data-aos="fade-up" data-aos-duration="750">
+          <h1><i class="fas fa-utensils"></i>　店舗情報</h1>
 
-        <div class="text-left">
-          <p class="pt-10 pb-3">アクセス<i class="fas fa-car-side"></i></p>
-          <div class="gmap">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.4692450637237!2d130.79323001919968!3d32.858278260739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f14ba74cecd7%3A0x8cc556f01f24860e!2z44GK5oyB44Gh5biw44KK54S86bOlIOWPo-emjyDlhYnjga7mo67lupc!5e0!3m2!1sja!2sjp!4v1582821007638!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <div class="text-left">
+            <p class="pt-10 pb-3">アクセス<i class="fas fa-car-side"></i></p>
+            <div class="gmap">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.4692450637237!2d130.79323001919968!3d32.858278260739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f14ba74cecd7%3A0x8cc556f01f24860e!2z44GK5oyB44Gh5biw44KK54S86bOlIOWPo-emjyDlhYnjga7mo67lupc!5e0!3m2!1sja!2sjp!4v1582821007638!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+           </div>
+           <p class="pt-3">〒869-1101</p>
+           <p>熊本県菊池郡菊陽町大字津久礼2266-1</p>
+
+
+           <p class="pt-7">営業時間<i class="fas fa-clock"></i></p>
+           <p>15:30 ～ 22:00（不定休）</p>
+
+
+           <p class="pt-7">電話<i class="fas fa-phone-volume"></i></p>
+           <p class="pd-3">TEL：<a class="clr-white border-b" href="tel:080-8391-7616">080-8391-7616</a></p>
          </div>
-         <p class="pt-3">〒869-1101</p>
-         <p>熊本県菊池郡菊陽町大字津久礼2266-1</p>
-
-
-         <p class="pt-7">営業時間<i class="fas fa-clock"></i></p>
-         <p>15:30 ～ 22:00（不定休）</p>
-
-
-         <p class="pt-7">電話<i class="fas fa-phone-volume"></i></p>
-         <p class="pd-3">TEL：<a class="clr-white border-b" href="tel:080-8391-7616">080-8391-7616</a></p>
        </div>
      </div>
    </div>
@@ -425,6 +443,14 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true
+  });
+</script>
 
 <!-- Smooth_Slider JS -->
 <script src="assets/smooth_slider/smooth_slider.js"></script>
