@@ -284,7 +284,7 @@ header{
 }
 .header-contents{
   width: 95%;
-  height: 8rem;
+  height: 6rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -311,7 +311,7 @@ nav{
   display: none;
   width: 100%;
   position: fixed;
-  top: 8rem;
+  top: 6rem;
   z-index:998;
   /* 任意のナビゲーションカラー */
   background-color: #222831;
@@ -323,6 +323,7 @@ nav a{
   display: block;
   padding-left: 2rem;
   color:white;
+  font-size: 2.3rem;
 }
 nav a:hover{
     color: #FD7013;
@@ -534,7 +535,7 @@ hr{
 /*フッターここまで*/
 
 /*レスポンシブ*/
-@media (min-width: 720px){
+@media (min-width: 639px){
   #title img{
   position: absolute;
   height: 50%;
@@ -624,6 +625,9 @@ footer img{
     display: inline;
     margin-left: 2rem;
     margin-right: 2rem; 
+  }
+    footer ul a{
+      font-size: 2.0rem;
   }
 }
 /*レスポンシブここまで*/
