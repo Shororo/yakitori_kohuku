@@ -26,6 +26,31 @@
 	// Slideshow Background.
 		(function() {
 
+
+			//ヘッダー
+//windowサイズが変化するごとにjQueryの動作を変更する判定
+var timer = false;
+var currentWidth = window.innerWidth;
+$(window).resize(function() {
+ if (currentWidth == window.innerWidth) {
+        // ウインドウ横幅が変わっていないため処理をキャンセル。
+        // safariでリロードされる現象を防ぐ
+        return;
+      }else if (timer !== false) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(function() {
+        location.reload();
+      }, 200);
+    });
+
+	//現在の画面サイズ
+  var winW = $(window).width();
+  //判定基準にしたい画面サイズ
+  var devW = 1023;
+  
+  if (winW <= devW) {
+
 			// Settings.
 				var settings = {
 
@@ -42,6 +67,26 @@
 
 				};
 
+				} else {
+  //720pxより大きい時の処理
+
+  // Settings.
+				var settings = {
+
+					// Images (in the format of 'url': 'alignment').
+						images: {
+							'images/title01.jpg': 'center',
+							'images/yakitori01.jpg': 'center',
+							'images/title03.jpg': 'center',
+							'images/title02.jpg': 'center'
+						},
+
+					// Delay.
+						delay: 6000
+
+				};
+				
+}
 			// Vars.
 				var	pos = 0, lastPos = 0,
 					$wrapper, $bgs = [], $bg,
