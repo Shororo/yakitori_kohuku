@@ -444,6 +444,7 @@ footer img{
 }
 .tanpin p{
   line-height: 1.8;
+  letter-spacing: 0rem;
 }
 .tanpin img{
   width: 100%;
@@ -458,6 +459,7 @@ footer img{
 }
 .nedan{
   color: #FD7013;
+  letter-spacing: 0rem;
 }
 /*メニューここまで*/
 
