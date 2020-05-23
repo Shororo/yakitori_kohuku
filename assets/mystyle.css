@@ -208,6 +208,10 @@ p{
   padding-top: 15rem;
   padding-bottom: 15rem;
 }
+.set-padding0{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 /*パディングとマージンここまで*/
 
 /*widthとheight*/
@@ -355,7 +359,7 @@ nav a:hover{
     height: auto;
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: 10% 20% 70%;
+    grid-template-columns: 10% 15% 75%;
   }
  .header-logo{
     height: 60%;
@@ -464,6 +468,10 @@ footer img{
   color: #FD7013;
   letter-spacing: 0rem;
 }
+.picture-set{
+  height: 30rem;
+  width: 100%;
+}
 /*メニューここまで*/
 
 /*トップページ*/
@@ -553,6 +561,12 @@ hr{
   z-index: 999;
 }
 /*ローディング画面ここまで*/
+@media (max-width: 768px){
+  .picture-set{
+    height: 23rem;
+    width: 100%;
+  }
+}
 
 @media (max-width: 639px){
   .movie-first{
